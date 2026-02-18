@@ -14,15 +14,150 @@
 <meta property="og:description" content="Es este mouse de razer una buena compra?">
 <style>
     body{
-        background-color: #121212;
-        color: #f1f1f1;
+        background-color: #000000;
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style:italic;
+        padding: 40px;
+        line-height: 1.5;
+        background-image: url(image/chamber.jpeg);
+        
     }
+
+    h1{
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align:center;
+        letter-spacing: 2px;
+    }
+
+    .container{
+        max-width:900px;
+        margin: auto;
+        padding: 0 25px;
+
+    }
+
+    body>header{
+        background-color: #ccc;
+        
+        border-radius: 50px;
+        border-style:double;
+        margin: 90px 300px;
+        
+    }
+
+    main{
+        background-color: white;
+        border-style: double;
+        border-radius: 50px;
+        margin:90px 250px;
+        
+    }
+
+    li>a{
+         display:block;
+        background: #0a7734;
+        color: white;
+        padding:9px ;
+        border-radius: 60px;
+        border-style: double;
+        text-decoration: none;
+        margin: 10px 2px;
+        box-shadow: 10px 10px 10px rgb(0, 0,0)
+    }
+
+    li>a:hover{
+         background-color: #11f368c5;
+    }
+
+    li>a:active{
+        background-color:#075e28;
+    }
+
+    .contact{
+        color: #000000;
+        text-decoration: none;
+        display: block;
+        background-color: rgba(0, 255, 255, 0.616);
+        padding: 9px;
+        border-radius: 10px;
+        border-style:groove;
+        margin: 50px 200px;
+        text-align: center;
+        box-shadow: 10px 10px 0px ;
+        box-decoration-break:clone;
+        
+        
+    }
+
+    .contact:hover{
+        background-color: rgba(0, 255, 255, 0.979);
+
+    }
+
+    .contact:active{
+        background-color: #007c85;
+    }
+
+    img{
+        width:clamp(130px, 35vw, 350px) ;
+        height: auto;
+        aspect-ratio:initial;
+        display: block;
+        margin: auto;
+        padding: 2px;
+        background-color: #000000;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgb(22, 179, 35);
+    }
+
+     .inputt{
+        background-color: white;
+        border-style: double;
+        border-radius: 5px;
+        margin: 90px 500px;
+        
+    }
+
+    input{
+         width: 90%;
+        padding: 5px;
+        margin-bottom: 15px;
+        border: 2px solid #acacac;
+        border-radius: 100px;
+
+    }
+    
+    body>footer{
+        background-color: rgb(212, 212, 212);
+        border-style: double;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 25px;
+    }
+    
+    input:focus{
+        outline: none;
+        border-color: #0b8f4d;
+        box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+    }
+
+    .formulario{
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+    }
+
+
 </style>
 
 </head>
 
  <body>
-    <header style="background-color: aqua; color: #000000; padding-left: 50%; width: 100%;" >
+    <header >
+        <div class="container">
     <h1 id="titulo">Razer Viper V3 HS es buen o mal mouse?</h1>
     <img class="img" src="image/razer.webp" alt="Razer Viper V3 HS" title="Razer Viper V3 HS">
 <nav>
@@ -42,12 +177,13 @@
 
 
 </ol>
-<a href="contact.html">Contactanos</a>
+<a href="contact.html" class="contact">Contactanos</a>
 </nav>
-
+</div>
     </header>
 
-    <main>
+    <main >
+        <div class="container">
         <section>
 <h2 id="intro">INTRODUCCION</h2>
 <p>El mouse de razer lanzado al mercado en 2025, fue un gran lanzamiento aunque paso un poco desapercibido por un aspecto que le quita atractivo a muchas personas
@@ -184,22 +320,79 @@
             
         </ol>
     </aside>
-</section>
+</section >
 
-<input type="checkbox">
-<input type="email" name="email" id="email"> email
-<p><input type="file"></p>
-<p>Deja tu comentario</p>
 
-<textarea name="texts" id="text" rows="10" cols="40"></textarea>
+
+</div>
+    </main>
+
+    <section class="inputt">
+
+    <h2>Formulario de Contacto</h2>
+    <form action="/" method="post" class="formulario"> 
+        <fieldset>
+          <legend>Informacion de Contacto</legend>
+          
+          <label style="display: block;" >
+            Nombre: 
+            <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            placeholder="Juan Carlos Ramirez Perez"
+            required>
+        
+          </label>
+
+          <label style="display: block;">
+            Correo electronico:
+            <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder="example@gmail.com"
+            required>
+          </label>
+
+          <label style="display: block;">
+            Numero de telefono:
+            <input 
+            type="tel"
+            name="tel" 
+            id="tel" 
+            placeholder="87120088"
+            required
+            pattern="[0-9]{8}">
+          </label>
+
+        </fieldset>
+
+        
+
+        <fieldset class="terms">
+            <label for="terms"> Acepta terminos y condiciones</label>
+        <input type="checkbox" 
+        name="terms" 
+        id="terms"
+        required>
+        </fieldset>
+        <input type="submit"
+        name="submit" class="submit">
+
+     
+    </form>
+
 
 <p><small>Estos widget son interactivos pero no guardan informacion en la pagina</small></p>
-    </main>
-    
-<footer>
+
+    </section>
+<footer >
+
+    <div class="container">
     <p>Chelle, 2026</p>
     <p>El conocimento es el engranaje que mueve a la humanidad.</p>
-    
+    </div>
 </footer>
 
 
