@@ -16,28 +16,181 @@
     body{
         background-color: white;
         color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
     }
 
+    h1{
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    h2{
+        color: #444;
+    }
+
+    header .container{
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    main .container{
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    footer .container{
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .nave a{
+        color: rgb(255, 254, 254);
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background: rgb(27, 115, 156);
+    }
+
+    .nave a:hover{
+        background-color: rgb(22, 95, 129);
+    }
+    
+    .nave a:active{
+        background-color: rgb(11, 47, 65);
+        color: rgb(255, 255, 255);
+    }
+
+    .nave a:visited{
+        background-color: #444;
+    }
+
+    .button a{
+        display: inline-block;
+        background: #25d366;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 6px;
+        border-style: groove;
+        text-decoration: none;
+        
+    }
+
+    .button a:hover{
+        background:#1ebe5d;
+    }
+
+    .button a:active{
+        background-color: #106130;
+    }
+
+    .button a:visited{
+        background-color: #444;
+    }
+
+     .imgcontact{
+        width: 100%;
+        padding: 10px ;
+        border-radius: 100px;
+        background-color: rgb(23, 222, 236);
+        border-style:ridge;
+        box-shadow: 10px 10px 10px #111;
+    }
+
+    .imglogo{
+        display: block;
+        width: 25%;
+        padding: 1px ;
+        border-radius: 100px;
+        background-color: rgb(23, 222, 236);
+        border-style:ridge;
+        box-shadow: 10px 10px 10px #111;
+        margin: auto;
+        
+    }
+
+    input, select{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #ccc;
+        border-radius: 100px;
+
+    }
+
+    input:focus, select:focus{
+        outline: none;
+        border-color: #0077ff;
+        box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+    }
+
+    .formulario{
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+    }
+
+    footer{
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: white;
+    }
+
+     .terms{
+        width: 100%;
+        text-align: center;
+       background:silver;
+    }
+
+    .terms:hover{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .terms:active{
+        background-color: #31f700;
+    }
+
+    .submit:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .submit:active{
+        background-color: #1ebe5d;
+        color: white;
+    }
+
+    
 </style>
 
 </head>
 
 <body>
-    <header style="background-color: rgb(151, 192, 197); 
-        text-aling:center;
-        padding:20px;">
-         <img class="img" 
+    <header >
+        <div class="container">
+         <img class="imglogo" 
          src="image/logo1.jpeg" 
          alt="Logo de AstroAventuras se compone de dos lunas una de cuarto creciente y una de cuarto menguante, la mitad de una complementa la otra" 
          title="Logo de AstroAventuras"
          width="500" 
          height="200">
         <h1>CONTACTANOS</h1>
-        <p> <nav>
+         <nav class="nave">
             <a href="index.html">&#127968;INICIO</a>
         </nav>
+        <h3>
         CONTACTANOS 
-        </p>
+        </h3>
+
+<nav class="button">
         <div>
             <a href="https://wa.me/50589973799?text=Hola%20quiero%20información">
     Contactenos via WhatsApp
@@ -48,22 +201,25 @@
         </div>
 
         <div>
-            <a href="tel:50589973799">Contactenos por llamada telefonica</a>
+            <a href="tel+50589973799">Contactenos por llamada telefonica</a>
         </div>
+        </nav>
        
+        </div>
     </header>
 
     <main>
+        <div class="container">
 <h2><strong>Comunicate con nosotros</strong></h2>
 <p>Cotiza, reserva, o haz preguntas sobre el modelo de telescopio en el que esta interesado. Un agente de servicio al cliente le atendera lo mas pronto posible</p>
-<img class="img" 
+<img class="imgcontact" 
 src="image/logo.jpeg"
  alt="Imagen con informacion de contacto de AstroAventuras" 
  title=" Informacion de contacto">
 
 <section>
     <h2>Formulario de Contacto</h2>
-    <form action="/" method="post"> 
+    <form action="/" method="post" class="formulario"> 
         <fieldset>
           <legend>Informacion de Contacto</legend>
           
@@ -122,7 +278,7 @@ src="image/logo.jpeg"
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="terms">
             <label for="terms"> Acepta terminos y condiciones</label>
         <input type="checkbox" 
         name="terms" 
@@ -130,23 +286,23 @@ src="image/logo.jpeg"
         required>
         </fieldset>
         <input type="submit"
-        name="submit">
+        name="submit" class="submit">
 
      
     </form>
 </section>
 
+        </div>
+
     </main>
 
-    <footer style="background-color: grey;
-        padding:20px;
-        text-aling:center;" >
+    <footer >
+        <div class="container">
         <p>© 2026 AstroAventuras. All Rights Reserved | Powered by Disyscon S.A.</p>
+        </div>
     </footer>
 </body>
 
 
 
-
 </html>
-
